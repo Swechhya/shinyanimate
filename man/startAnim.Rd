@@ -2,7 +2,7 @@
 % Please edit documentation in R/anim.R
 \name{startAnim}
 \alias{startAnim}
-\title{Start an animation to a UI element.}
+\title{Start an animation}
 \usage{
 startAnim(session, id, type = NULL)
 }
@@ -14,7 +14,7 @@ startAnim(session, id, type = NULL)
 \item{type}{The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}}
 }
 \description{
-Start an animation to a UI element.
+Start an animation of the UI element.
 }
 \examples{
 \dontrun{

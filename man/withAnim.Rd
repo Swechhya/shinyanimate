@@ -2,7 +2,7 @@
 % Please edit documentation in R/anim.R
 \name{withAnim}
 \alias{withAnim}
-\title{This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.}
+\title{Set up Shiny app to use animation}
 \usage{
 withAnim()
 }

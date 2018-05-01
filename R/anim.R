@@ -1,3 +1,5 @@
+#' Set up Shiny app to use animation
+#'
 #' This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.
 #' @export
 #' @examples
@@ -14,7 +16,9 @@ withAnim <- function(){
   )
 }
 
-#' Start an animation to a UI element.
+#'Start an animation
+#'
+#' Start an animation of the UI element.
 #' @export
 #' @param session The session object passed to function given to shinyServer.
 #' @param id the id of the UI element for which you want to add animation.
