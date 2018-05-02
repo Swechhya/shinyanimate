@@ -1,6 +1,6 @@
 Package: shinyanimate
 Type: Package
-Title: Animation for Shiny elements
+Title: Animation for Shiny Elements
 Version: 0.1.0
 Author: Swechhya Bista
 Maintainer: Swechhya Bista <swechhyabista@gmail.com>

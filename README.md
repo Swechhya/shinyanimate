@@ -1,5 +1,5 @@
 # shinyanimate
-Add animation animation to elements in Shiny.
+shinyanimate package is an R wrapper for [animate.css](https://daneden.github.io/animate.css/). It allows user to easily add animations to any UI element in shiny app using the elements id.
 
 ## Installation
 
