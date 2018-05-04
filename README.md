@@ -2,9 +2,13 @@
 shinyanimate package is an R wrapper for [animate.css](https://daneden.github.io/animate.css/). It allows user to easily add animations to any UI element in shiny app using the elements id.
 
 ## Installation
+To install the stable CRAN version: 
+```r
+install.packages("shinyanimate")
+```
 
-You can install it from `github` using the `devtools` package.
 
+To install the latest development version from GitHub:
 ```r
 library(devtools)
 install_github('Swechhya/shinyanimate')
