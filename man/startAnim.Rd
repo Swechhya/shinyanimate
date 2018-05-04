@@ -17,7 +17,7 @@ startAnim(session, id, type = NULL)
 Start an animation of the UI element.
 }
 \examples{
-\dontrun{
+if(interactive()){
 library(shiny)
 library(shinyanimate)
 ui <- fluidPage(
@@ -25,7 +25,7 @@ ui <- fluidPage(
  tags$div(id = 'title', h1('ANIMATION')),
  actionButton(inputId = "button", label = "Animate")
 )
-server <- function(input, output, session) {
+server <- function(input, output, session){
  observeEvent(input$button,{
    startAnim(session, 'title', 'bounce')
  })

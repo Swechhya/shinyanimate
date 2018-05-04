@@ -10,7 +10,7 @@ withAnim()
 This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.
 }
 \examples{
-\dontrun{withAnim()}
+if(interactive()){withAnim()}
 }
 \seealso{
 \code{\link{startAnim}}

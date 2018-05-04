@@ -3,7 +3,7 @@
 #' This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.
 #' @export
 #' @examples
-#' \dontrun{withAnim()}
+#' if(interactive()){withAnim()}
 #' @seealso \code{\link{startAnim}}
 withAnim <- function(){
   shiny::tagList(
@@ -24,7 +24,7 @@ withAnim <- function(){
 #' @param id the id of the UI element for which you want to add animation.
 #' @param type The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}
 #' @examples
-#' \dontrun{
+#'if(interactive()){
 #'library(shiny)
 #'library(shinyanimate)
 #'ui <- fluidPage(
@@ -32,7 +32,7 @@ withAnim <- function(){
 #'  tags$div(id = 'title', h1('ANIMATION')),
 #'  actionButton(inputId = "button", label = "Animate")
 #')
-#'server <- function(input, output, session) {
+#'server <- function(input, output, session){
 #'  observeEvent(input$button,{
 #'    startAnim(session, 'title', 'bounce')
 #'  })
