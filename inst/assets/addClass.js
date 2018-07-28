@@ -1,6 +1,6 @@
 $.fn.extend({
-  animateCss: function(animationName, callback) {
-    var animationEnd = (function(el) {
+  animateCss: function (animationName, callback) {
+    var animationEnd = (function (el) {
       var animations = {
         animation: 'animationend',
         OAnimation: 'oAnimationEnd',
@@ -15,7 +15,7 @@ $.fn.extend({
       }
     })(document.createElement('div'));
 
-    this.addClass('animated ' + animationName).one(animationEnd, function() {
+    this.addClass('animated ' + animationName).one(animationEnd, function () {
       $(this).removeClass('animated ' + animationName);
 
       if (typeof callback === 'function') callback();
@@ -23,13 +23,29 @@ $.fn.extend({
 
     return this;
   },
+
+  animateHover: function (animationName) {
+
+    $(this).on('mouseover', function () {
+      $(this).addClass('animated ' + animationName);
+    });
+    $(this).on('mouseout', function () {
+      $(this).removeClass('animated ' + animationName);
+    });
+  }
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
   Shiny.addCustomMessageHandler("addClass",
-    function(message){
-        $('#'+ message["ele"]).animateCss(message["name"]);
+    function (message) {
+      $('#' + message["ele"]).animateCss(message["name"]);
+    }
+  );
+
+  Shiny.addCustomMessageHandler("addClassHover",
+    function (message) {
+      $('#' + message["ele"]).animateHover(message["name"]);
     }
   );
 })

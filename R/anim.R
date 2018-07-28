@@ -46,3 +46,30 @@ startAnim <- function(session, id, type = NULL){
     type = "addClass",
     message = list(ele = id, name = type))
 }
+
+#' Add animation on mouse hover for UI element.
+#' @export
+#' @param session The session object passed to function given to shinyServer.
+#' @param id the id of the UI element for which you want animation on mouse hover.
+#' @param type The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}
+#' @examples
+#' if(interactive()){
+#' library(shiny)
+#' library(shinyanimate)
+#' ui <- fluidPage(
+#'   withAnim(),
+#'     tags$div(id = 'title', h1('HOVER ON ME'))
+#'     )
+#' server <- function(input, output, session){
+#'   observe(addHoverAnim(session, 'title', 'bounce'))
+#'  }
+#' shinyApp(ui, server)
+#'}
+#'@seealso \code{\link{withAnim}}
+#'
+addHoverAnim <- function(session, id, type = NULL) {
+  session$sendCustomMessage(
+    type = "addClassHover",
+    message = list(ele = id, name = type))
+}
+
