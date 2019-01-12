@@ -7,6 +7,9 @@
     ),
     shiny::singleton(
       shiny::tags$script(src="assets/addClass.js")
+    ),
+    shiny::singleton(
+      shiny::tags$script(src="assets/scrollAnimation.js")
     )
   )
 

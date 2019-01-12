@@ -12,6 +12,9 @@ withAnim <- function(){
     ),
     shiny::singleton(
       shiny::tags$script(src="assets/addClass.js")
+    ),
+    shiny::singleton(
+      shiny::tags$script(src="assets/scrollAnimation.js")
     )
   )
 }
@@ -70,6 +73,39 @@ startAnim <- function(session, id, type = NULL){
 addHoverAnim <- function(session, id, type = NULL) {
   session$sendCustomMessage(
     type = "addClassHover",
+    message = list(ele = id, name = type))
+}
+
+#' Add animation on scroll for UI element.
+#' @export
+#' @param session The session object passed to function given to shinyServer.
+#' @param id the id of the UI element for which you want animation on scroll.
+#' @param type The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}
+#' @examples
+#' if(interactive()){
+#' library(shiny)
+#' library(shinyanimate)
+#' ui <- fluidPage(
+#'   withAnim(),
+#'     tags$h1('Scroll below to see an animation'),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     br(), br(), br(), br(), br(), br(), br(),
+#'     tags$div(id = 'title', h1('I ANIMATE ON SCROLL'))
+#'     )
+#' server <- function(input, output, session){
+#'   observe(addScrollAnim(session, 'title', 'bounce'))
+#'  }
+#' shinyApp(ui, server)
+#'}
+#'@seealso \code{\link{withAnim}}
+#'
+addScrollAnim <- function(session, id, type = NULL) {
+  session$sendCustomMessage(
+    type = "addClassScroll",
     message = list(ele = id, name = type))
 }
 
