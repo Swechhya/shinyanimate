@@ -20,6 +20,7 @@ $.fn.inViewport = function () {
 $.fn.scrollAnimation = function (animationName) {
   if ($(this).inViewport()) {
     $(this).addClass('animated ' + animationName);
+    return;
   }
 
   $(this).removeClass('animated ' + animationName);
