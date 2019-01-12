@@ -49,7 +49,14 @@ $(document).ready(function () {
   Shiny.addCustomMessageHandler("addClassScroll",
     function (message) {
       $(document).on('scroll', function () {
-        $('#' + message["ele"]).scrollAnimation(message["name"]);
+        let scrollTimeout;
+        if (!scrollTimeout) {
+          scrollTimeout = setTimeout(function () {
+            $('#' + message["ele"]).scrollAnimation(message["name"]);
+            scrollTimeout = null;
+          }, 1000/60)
+        }
+      
       });
     }
   );
