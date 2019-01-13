@@ -1,4 +1,3 @@
-
 $.fn.inViewport = function () {
   const windowHeight = $(window).height();
   const windowTopPosition = $(window).scrollTop();
