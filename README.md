@@ -54,7 +54,7 @@ shinyApp(ui, server)
 ```
 ![hoverAnim](inst/images/hoverAnim.gif)
 
-### Add animation when the element comes into view after scrolling
+### Add animation when the element comes into view after scrolling:
 ```r
 library(shiny)
 library(shinyanimate)
