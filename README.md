@@ -53,3 +53,22 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 ![hoverAnim](inst/images/hoverAnim.gif)
+
+### Add animation when the element comes into view after scrolling:
+```r
+library(shiny)
+library(shinyanimate)
+ui <- fluidPage(
+    withAnim(),
+    tags$h1('Scroll below to see an animation'),
+    br(), br(), br(), br(), br(), br(), br(),
+    br(), br(), br(), br(), br(), br(), br(),
+    div( id = 'shinyLogo', tags$img(src= "https://www.rstudio.com/wp-content/uploads/2014/04/shiny-600x695.png", width = "100px", height = "100px"))
+)
+server <- function(input, output, session) {
+    observe(addScrollAnim(session, 'shinyLogo', 'bounceInRight'))
+}
+shinyApp(ui, server)
+```
+
+![scrollAnim](inst/images/scrollAnim.gif)
