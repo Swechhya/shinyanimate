@@ -7,7 +7,7 @@
 withAnim()
 }
 \description{
-This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.
+This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimate.
 }
 \examples{
 if(interactive()){withAnim()}

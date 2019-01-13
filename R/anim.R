@@ -1,6 +1,6 @@
 #' Set up Shiny app to use animation
 #'
-#' This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimation.
+#' This function needs to be added in the UI if to want to add animation to your UI elements using shinyanimate.
 #' @export
 #' @examples
 #' if(interactive()){withAnim()}
