@@ -4,11 +4,9 @@
 \alias{addScrollAnim}
 \title{Add animation on scroll for UI element.}
 \usage{
-addScrollAnim(session, id, type = NULL)
+addScrollAnim(id, type = NULL)
 }
 \arguments{
-\item{session}{The session object passed to function given to shinyServer.}
-
 \item{id}{the id of the UI element for which you want animation on scroll.}
 
 \item{type}{The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}}
