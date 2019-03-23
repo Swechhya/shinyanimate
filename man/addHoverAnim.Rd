@@ -4,11 +4,9 @@
 \alias{addHoverAnim}
 \title{Add animation on mouse hover for UI element.}
 \usage{
-addHoverAnim(session, id, type = NULL)
+addHoverAnim(id, type = NULL)
 }
 \arguments{
-\item{session}{The session object passed to function given to shinyServer.}
-
 \item{id}{the id of the UI element for which you want animation on mouse hover.}
 
 \item{type}{The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}}
@@ -25,9 +23,9 @@ ui <- fluidPage(
     tags$div(id = 'title', h1('HOVER ON ME'))
     )
 server <- function(input, output, session){
-  observe(addHoverAnim(session, 'title', 'bounce'))
+  observe(addHoverAnim('title', 'bounce'))
  }
-shinyApp(ui, server)
+if(interactive()) shinyApp(ui, server)
 }
 }
 \seealso{
