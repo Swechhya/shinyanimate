@@ -36,10 +36,10 @@ withAnim <- function(){
 #')
 #'server <- function(input, output, session){
 #'  observeEvent(input$button,{
-#'    startAnim(session, 'title', 'bounce')
+#'    startAnim('title', 'bounce')
 #'  })
 #'}
-#'shinyApp(ui, server)
+#'if(interactive()) shinyApp(ui, server)
 #'}
 #'@seealso \code{\link{withAnim}}
 #'
@@ -63,9 +63,9 @@ startAnim <- function(id, type = NULL){
 #'     tags$div(id = 'title', h1('HOVER ON ME'))
 #'     )
 #' server <- function(input, output, session){
-#'   observe(addHoverAnim(session, 'title', 'bounce'))
+#'   observe(addHoverAnim('title', 'bounce'))
 #'  }
-#' shinyApp(ui, server)
+#'if(interactive()) shinyApp(ui, server)
 #'}
 #'@seealso \code{\link{withAnim}}
 #'
@@ -96,9 +96,9 @@ addHoverAnim <- function(id, type = NULL) {
 #'     tags$div(id = 'title', h1('I ANIMATE ON SCROLL'))
 #'     )
 #' server <- function(input, output, session){
-#'   observe(addScrollAnim(session, 'title', 'bounce'))
+#'   observe(addScrollAnim('title', 'bounce'))
 #'  }
-#' shinyApp(ui, server)
+#'if(interactive()) shinyApp(ui, server)
 #'}
 #'@seealso \code{\link{withAnim}}
 #'

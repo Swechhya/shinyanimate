@@ -25,10 +25,10 @@ ui <- fluidPage(
 )
 server <- function(input, output, session){
  observeEvent(input$button,{
-   startAnim(session, 'title', 'bounce')
+   startAnim('title', 'bounce')
  })
 }
-shinyApp(ui, server)
+if(interactive()) shinyApp(ui, server)
 }
 }
 \seealso{

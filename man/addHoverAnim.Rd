@@ -23,9 +23,9 @@ ui <- fluidPage(
     tags$div(id = 'title', h1('HOVER ON ME'))
     )
 server <- function(input, output, session){
-  observe(addHoverAnim(session, 'title', 'bounce'))
+  observe(addHoverAnim('title', 'bounce'))
  }
-shinyApp(ui, server)
+if(interactive()) shinyApp(ui, server)
 }
 }
 \seealso{

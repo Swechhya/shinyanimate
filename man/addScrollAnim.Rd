@@ -30,9 +30,9 @@ ui <- fluidPage(
     tags$div(id = 'title', h1('I ANIMATE ON SCROLL'))
     )
 server <- function(input, output, session){
-  observe(addScrollAnim(session, 'title', 'bounce'))
+  observe(addScrollAnim('title', 'bounce'))
  }
-shinyApp(ui, server)
+if(interactive()) shinyApp(ui, server)
 }
 }
 \seealso{
