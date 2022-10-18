@@ -18,9 +18,9 @@ $.fn.inViewport = function () {
 
 $.fn.scrollAnimation = function (animationName) {
   if ($(this).inViewport()) {
-    $(this).addClass('animated ' + animationName);
+    $(this).addClass('animate__animated animate__' + animationName);
     return;
   }
 
-  $(this).removeClass('animated ' + animationName);
+    $(this).removeClass('animate__animated animate__' + animationName)
 }

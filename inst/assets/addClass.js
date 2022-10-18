@@ -14,8 +14,8 @@ $.fn.animateCss = function (animationName, callback) {
     }
   })(document.createElement('div'));
 
-  this.addClass('animated ' + animationName).one(animationEnd, function () {
-    $(this).removeClass('animated ' + animationName);
+  this.addClass('animate__animated animate__' + animationName).one(animationEnd, function () {
+    $(this).removeClass('animate__animated animate__' + animationName)
 
     if (typeof callback === 'function') callback();
   });
@@ -26,10 +26,10 @@ $.fn.animateCss = function (animationName, callback) {
 $.fn.animateHover = function (animationName) {
 
   $(this).on('mouseover', function () {
-    $(this).addClass('animated ' + animationName);
+    $(this).addClass('animate__animated animate__' + animationName);
   });
   $(this).on('mouseout', function () {
-    $(this).removeClass('animated ' + animationName);
+    $(this).removeClass('animate__animated animate__' + animationName);
   });
 }
 

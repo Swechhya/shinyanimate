@@ -26,12 +26,12 @@ library(shiny)
 library(shinyanimate)
 ui <- fluidPage(
   withAnim(),
-  div( id = 'shinyLogo', tags$img(src= "https://www.rstudio.com/wp-content/uploads/2014/04/shiny-600x695.png", width = "100px", height = "100px")),
+  div( id = 'shinyLogo', tags$img(src= "http://hexb.in/hexagons/shiny.png", width = "100px", height = "100px")),
   actionButton(inputId = "button", label = "Animate")
 )
 server <- function(input, output, session) {
   observeEvent(input$button,{
-    startAnim(session, 'shinyLogo', 'shake')
+    startAnim(session, 'shinyLogo', 'shakeX')
   })
 }
 shinyApp(ui, server)
@@ -45,7 +45,7 @@ library(shiny)
 library(shinyanimate)
 ui <- fluidPage(
   withAnim(),
-  div( id = 'shinyLogo', tags$img(src= "https://www.rstudio.com/wp-content/uploads/2014/04/shiny-600x695.png", width = "100px", height = "100px"))
+  div( id = 'shinyLogo', tags$img(src= "http://hexb.in/hexagons/shiny.png", width = "100px", height = "100px"))
 )
 server <- function(input, output, session) {
   observe(addHoverAnim(session, 'shinyLogo', 'pulse'))
@@ -63,7 +63,7 @@ ui <- fluidPage(
     tags$h1('Scroll below to see an animation'),
     br(), br(), br(), br(), br(), br(), br(),
     br(), br(), br(), br(), br(), br(), br(),
-    div( id = 'shinyLogo', tags$img(src= "https://www.rstudio.com/wp-content/uploads/2014/04/shiny-600x695.png", width = "100px", height = "100px"))
+    div( id = 'shinyLogo', tags$img(src= "http://hexb.in/hexagons/shiny.png", width = "100px", height = "100px"))
 )
 server <- function(input, output, session) {
     observe(addScrollAnim(session, 'shinyLogo', 'bounceInRight'))
