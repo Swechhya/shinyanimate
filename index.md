@@ -83,6 +83,41 @@ shinyApp(ui, server)
 \
 \
 
+### Working with modules
+```r
+library(shiny)
+library(shinyanimate)
+
+animUI <- function(id, label = "Animate") {
+  ns <- NS(id)
+  tagList(
+    div( id = ns("anim"), tags$img(src= "http://hexb.in/hexagons/shiny.png", width = "100px", height = "100px")),
+    actionButton(inputId = ns("button"), label = label)
+  )
+}
+
+animServer <- function(id) {
+  moduleServer(
+    id,
+    function(input, output, session) {
+      observeEvent(input$button,{
+        startAnim(session, id = "anim", type = 'shakeX' )
+    }
+  )
+    }
+)}
+
+ui <- fluidPage(
+  withAnim(),
+  animUI("logo")
+)
+server <- function(input, output, session) {
+  animServer("logo")
+}
+
+shinyApp(ui, server)
+```r
+
 ## Available Animations
 
 ### Attention seekers
