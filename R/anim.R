@@ -47,7 +47,7 @@ withAnim <- function(){
 startAnim <- function(session, id, type = NULL){
   session$sendCustomMessage(
     type = "addClass",
-    message = list(ele = id, name = type))
+    message = list(ele = session$ns(id), name = type))
 }
 
 #' Add animation on mouse hover for UI element.
@@ -73,7 +73,7 @@ startAnim <- function(session, id, type = NULL){
 addHoverAnim <- function(session, id, type = NULL) {
   session$sendCustomMessage(
     type = "addClassHover",
-    message = list(ele = id, name = type))
+    message = list(ele = session$ns(id), name = type))
 }
 
 #' Add animation on scroll for UI element.
@@ -106,6 +106,6 @@ addHoverAnim <- function(session, id, type = NULL) {
 addScrollAnim <- function(session, id, type = NULL) {
   session$sendCustomMessage(
     type = "addClassScroll",
-    message = list(ele = id, name = type))
+    message = list(ele = session$ns(id), name = type))
 }
 
