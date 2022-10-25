@@ -116,7 +116,7 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
-```r
+```
 
 ## Available Animations
 
