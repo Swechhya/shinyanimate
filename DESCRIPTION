@@ -1,7 +1,7 @@
 Package: shinyanimate
 Type: Package
 Title: Animation for 'shiny' Elements
-Version: 0.3.0	
+Version: 0.3.0
 Author: Swechhya Bista
 Maintainer: Swechhya Bista <swechhyabista@gmail.com>
 Description: An extension of 'animate.css' that allows user to easily add animations to any UI element in 'shiny' app using the elements id.
