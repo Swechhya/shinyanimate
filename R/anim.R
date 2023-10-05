@@ -15,6 +15,9 @@ withAnim <- function(){
     ),
     shiny::singleton(
       shiny::tags$script(src="assets/scrollAnimation.js")
+    ),
+       shiny::singleton(
+      shiny::tags$script(src="assets/util.js")
     )
   )
 }
@@ -26,6 +29,7 @@ withAnim <- function(){
 #' @param session The session object passed to function given to shinyServer.
 #' @param id the id of the UI element for which you want to add animation.
 #' @param type The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}
+#' @param delay The time after which you want to add animationin milliseconds 
 #' @examples
 #'if(interactive()){
 #'library(shiny)
@@ -44,10 +48,10 @@ withAnim <- function(){
 #'}
 #'@seealso \code{\link{withAnim}}
 #'
-startAnim <- function(session, id, type = NULL){
+startAnim <- function(session, id, type = NULL, delay = NULL){
   session$sendCustomMessage(
     type = "addClass",
-    message = list(ele = session$ns(id), name = type))
+    message = list(ele = session$ns(id), name = type, delay = delay))
 }
 
 #' Add animation on mouse hover for UI element.
