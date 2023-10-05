@@ -37,6 +37,12 @@ $.fn.animateHover = function (animationName) {
 
 $(document).ready(function () {
   Shiny.addCustomMessageHandler('addClass', function (message) {
+    if ( $.fn.validDelay(message['delay'])) {
+      setTimeout(function () {
+        $('#' + message['ele']).animateCss(message['name']);
+      }, message['delay']);
+      return;
+    }
     $('#' + message['ele']).animateCss(message['name']);
   });
 
