@@ -4,7 +4,7 @@
 \alias{startAnim}
 \title{Start an animation}
 \usage{
-startAnim(session, id, type = NULL)
+startAnim(session, id, type = NULL, delay = NULL)
 }
 \arguments{
 \item{session}{The session object passed to function given to shinyServer.}
@@ -12,6 +12,8 @@ startAnim(session, id, type = NULL)
 \item{id}{the id of the UI element for which you want to add animation.}
 
 \item{type}{The type of animation to use, valid values correspond to the types in \url{https://daneden.github.io/animate.css/}}
+
+\item{delay}{The time after which you want to add animationin milliseconds}
 }
 \description{
 Start an animation of the UI element.
