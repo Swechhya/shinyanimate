@@ -1,7 +1,7 @@
 # shinyanimate
 
-[![version](http://www.r-pkg.org/badges/version/shinyanimate)](https://CRAN.R-project.org/package=animate)
-[![cranlogs](http://cranlogs.r-pkg.org/badges/shinyanimate)](https://cran.rstudio.com/web/packages/shinyanimate/index.html)
+[![version](http://www.r-pkg.org/badges/version/shinyanimate)](https://cran.r-project.org/package=shinyanimate)
+[![cranlogs](http://cranlogs.r-pkg.org/badges/shinyanimate)](https://cran.r-project.org/package=shinyanimate)
 
 shinyanimate package is an R wrapper for [animate.css](https://daneden.github.io/animate.css/). It allows user to easily add animations to any UI element in shiny app using the elements id.
 
