@@ -7,7 +7,7 @@ Maintainer: Swechhya Bista <swechhyabista@gmail.com>
 Description: An extension of 'animate.css' that allows user to easily add animations to any UI element in 'shiny' app using the elements id.
 Imports: shiny
 License: MIT + file LICENSE
-URL: https://github.com/Swechhya/shinyanimate
+URL: https://swechhya.github.io/shinyanimate/, https://github.com/Swechhya/shinyanimate
 BugReports: https://github.com/Swechhya/shinyanimate/issues
 Encoding: UTF-8
 LazyData: true
